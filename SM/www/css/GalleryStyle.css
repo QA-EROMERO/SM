@@ -1,0 +1,114 @@
+/* external css: flickity.css */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+	Desactivar todos los scrollbar
+*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+body { font-family: sans-serif; }
+
+
+video {
+  position: absolute;
+  width: 70%;
+  /* La altura es automática para que no se pierda
+	 las proporciones del video original.
+  */
+  height: auto;
+  max-height: 80%;
+  /*
+	Se agrega un margin-top de 30px para dejar espacio
+	para el título "The Legacy of The Mayan Culture"
+	en la parte superior.
+  */
+  margin-top: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+table {	
+	position: absolute;
+	width: 70%;
+	max-height: 80%;
+	/*
+		La altura (height) se la asignará el JQuery que obtiene
+		la altura del video y luego se la asigna a la tabla.
+		Por lo tanto no existe esa propiedad en esta página de
+		estilos.
+	*/
+	/*
+		Se agrega un margin-top de 30px para dejar espacio
+		para el título "The Legacy of The Mayan Culture"
+		en la parte superior.
+	*/
+	margin-top: 30px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+
+
+.next {
+	position: absolute;
+	/*
+		Se agrega un margin-top de 30px para dejar espacio
+		para el título "The Legacy of The Mayan Culture"
+		en la parte superior.
+	  */
+	margin-top: 30px;
+    top: 49%;
+    /*right: 2%;*/
+	right: 9%;
+	width: 4vw;
+	height: 4vw;
+}
+
+.back {
+	position: absolute;
+	/*
+		Se agrega un margin-top de 30px para dejar espacio
+		para el título "The Legacy of The Mayan Culture"
+		en la parte superior.
+	*/
+	margin-top: 30px;
+    top: 49%;
+    /*left: 2%;*/
+	left: 9%;
+	width: 4vw;
+	height: 4vw;
+}
+
+
+.tituloColeccion  {
+	position: relative;
+	top: 0%; 
+	width: auto;
+	height: 10vw;
+	max-height: 18%;
+	 /*
+	 display: flex;
+     margin-left: auto;
+	 margin-right: auto;
+	 */
+	 
+	display:flex;
+	margin: 0 auto;
+}
+
+.agradecimientos{
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	height: 3vw;
+	width: auto;
+}

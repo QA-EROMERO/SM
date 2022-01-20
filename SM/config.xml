@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.sm.thelegacy"
+    versionCode = "1"
+    version     = "1.0.0" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>Spin Museum</name>
+
+  <description>
+      Connect to other servers.
+  </description>
+
+  <author>
+      Twins, Inc.
+  </author>
+
+  
+  <!--<preference name = "orientation" value = "portrait"  />  -->
+  
+  <plugin name="cordova-plugin-whitelist" source="npm"/>
+
+  
+  <!-- This allows your app to load assets from all *.phongap.com domains -->
+  <access origin="*"/>
+  <!-- <plugin name="at.modalog.cordova.plugin.cache" spec="https://github.com/moderna/cordova-plugin-cache.git" /> -->
+  
+  <plugin name="at.modalog.cordova.plugin.cache" spec="https://github.com/moderna/cordova-plugin-cache.git" />
+  <plugin name="org.apache.cordova.plugin.cache" spec="https://github.com/tiltshiftfocus/cordova-plugin-cache.git" />
+	
+  <preference name="Orientation" value="landscape"/>
+  <icon src="www/img/logo.png"/>
+
+</widget>
