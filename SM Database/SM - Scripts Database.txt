@@ -28,3 +28,15 @@ CREATE TABLE IF NOT EXISTS `SM`.`SM_Procedencia` (
   `ID_Idioma` INT NULL COMMENT 'Código del Idioma.',
   PRIMARY KEY (`ID_Procedencia`))
 ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SM`.`SM_Material`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SM`.`SM_Material` (
+  `ID_Material` INT NULL AUTO_INCREMENT COMMENT 'Correlativo por cada registro.',
+  `Material` VARCHAR(50) NULL COMMENT 'Tipo de Material en la que se clasifican los Items.',
+  `Material_Info` VARCHAR(2500) NULL COMMENT 'Información detallada de los tipos de Materiales.',
+  `ID_Idioma` INT NULL COMMENT 'Código del Idioma.',
+  PRIMARY KEY (`ID_Material`))
+ENGINE = InnoDB;
