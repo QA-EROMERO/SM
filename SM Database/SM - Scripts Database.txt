@@ -3,3 +3,15 @@
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `SM` DEFAULT CHARACTER SET utf8 ;
 USE `SM` ;
+
+-- -----------------------------------------------------
+-- Table `SM`.`SM_PeriodoHistorico`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SM`.`SM_PeriodoHistorico` (
+  `ID_PeriodoHistorico` INT NULL AUTO_INCREMENT COMMENT 'Correlativo por cada registro.',
+  `Periodo` VARCHAR(50) NULL COMMENT 'Nombre del Período Histórico.',
+  `Periodo_Descripcion` VARCHAR(100) NULL,
+  `Periodo_Info` VARCHAR(2500) NULL COMMENT 'Información detallada del Período Histórico.',
+  `ID_Idioma` INT NULL COMMENT 'Código del Idioma.',
+  PRIMARY KEY (`ID_PeriodoHistorico`))
+ENGINE = InnoDB;
