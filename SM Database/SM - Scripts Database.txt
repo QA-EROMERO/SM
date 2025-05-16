@@ -15,3 +15,16 @@ CREATE TABLE IF NOT EXISTS `SM`.`SM_PeriodoHistorico` (
   `ID_Idioma` INT NULL COMMENT 'Código del Idioma.',
   PRIMARY KEY (`ID_PeriodoHistorico`))
 ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SM`.`SM_Procedencia`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SM`.`SM_Procedencia` (
+  `ID_Procedencia` INT NULL AUTO_INCREMENT COMMENT 'Correlativo por cada registro.',
+  `Procedencia` VARCHAR(100) NULL COMMENT 'Lugar de Procedencia de los Items.',
+  `Procedencia_Descripcion` VARCHAR(100) NULL,
+  `Procedencia_Info` VARCHAR(2500) NULL COMMENT 'Información detallada de la Procedencia.',
+  `ID_Idioma` INT NULL COMMENT 'Código del Idioma.',
+  PRIMARY KEY (`ID_Procedencia`))
+ENGINE = InnoDB;
