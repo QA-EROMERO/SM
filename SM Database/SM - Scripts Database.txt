@@ -1,0 +1,5 @@
+-- -----------------------------------------------------
+-- Schema SM
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `SM` DEFAULT CHARACTER SET utf8 ;
+USE `SM` ;
