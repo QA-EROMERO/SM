@@ -89,3 +89,13 @@ CREATE TABLE IF NOT EXISTS `SM`.`SM_ClasificacionUNESCO` (
   `ID_Idioma` INT NULL COMMENT 'Código del Idioma.',
   PRIMARY KEY (`ID_ClasificacionUNESCO`))
 ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SM`.`SM_Idioma`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SM`.`SM_Idioma` (
+  `ID_Idioma` INT NULL AUTO_INCREMENT COMMENT 'Correlativo por cada registro.',
+  `Idioma` VARCHAR(50) NULL COMMENT 'Catálogo de Idiomas disponibles para traducir la App.',
+  PRIMARY KEY (`ID_Idioma`))
+ENGINE = InnoDB;
