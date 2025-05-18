@@ -52,3 +52,18 @@ CREATE TABLE IF NOT EXISTS `SM`.`SM_UsoYForma` (
   `ID_Idioma` INT NULL COMMENT 'Código del Idioma.',
   PRIMARY KEY (`ID_UsoYForma`))
 ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SM`.`SM_Cedula`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SM`.`SM_Cedula` (
+  `ID_Cedula` INT NULL AUTO_INCREMENT COMMENT 'Correlativo por cada registro.',
+  `ID_SM` INT NULL COMMENT 'Código del Item al que pertenece esta Cédula.',
+  `Nombre` VARCHAR(100) NULL,
+  `Procedencia` VARCHAR(100) NULL,
+  `Periodo` VARCHAR(100) NULL,
+  `Referencia_MUNAE` VARCHAR(100) NULL,
+  `ID_Idioma` INT NULL COMMENT 'Código del Idioma.',
+  PRIMARY KEY (`ID_Cedula`))
+ENGINE = InnoDB;
