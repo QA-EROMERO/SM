@@ -67,3 +67,13 @@ CREATE TABLE IF NOT EXISTS `SM`.`SM_Cedula` (
   `ID_Idioma` INT NULL COMMENT 'Código del Idioma.',
   PRIMARY KEY (`ID_Cedula`))
 ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SM`.`SM_Mapa`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SM`.`SM_Mapa` (
+  `ID_Mapa` INT NULL AUTO_INCREMENT COMMENT 'Correlativo por cada registro.\nEsta es la parte superior dereche de la App en iOS donde se encuentra el mapa de Guatemala y debajo los siguientes campos:\n        Período     Preclásico        ( i )\nProcedencia     Tierras Altas    ( i )\n       Material     Cerámica         ( i )\n            Usos     Vasijas             ( i )',
+  `Mapa` VARCHAR(150) NULL COMMENT 'Ruta donde se encuentra el archivo .jpg del mapa.',
+  PRIMARY KEY (`ID_Mapa`))
+ENGINE = InnoDB;
