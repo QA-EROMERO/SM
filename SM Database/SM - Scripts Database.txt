@@ -203,3 +203,12 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 show variables like 'max_connections';
 SET GLOBAL max_connections = 1001;
+
+--- ----------------------------------------------------
+--- Agregar la siguiente línea al archivo my.ini MySQL
+--- debajo de la sección # The MySQL server
+---                      [mysqld]
+--- ----------------------------------------------------
+--- # The MySQL server
+--- [mysqld]
+--- max_connections = 1001
