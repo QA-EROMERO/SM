@@ -183,3 +183,14 @@ CREATE TABLE IF NOT EXISTS `SM`.`SM_Item` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SM`.`SM_Ruta`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SM`.`SM_Ruta` (
+  `ID_Ruta` INT NULL,
+  `ID_Item` INT NULL,
+  `Ruta` VARCHAR(150) NULL,
+  PRIMARY KEY (`ID_Ruta`))
+ENGINE = InnoDB;
