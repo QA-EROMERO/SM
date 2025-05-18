@@ -194,3 +194,12 @@ CREATE TABLE IF NOT EXISTS `SM`.`SM_Ruta` (
   `Ruta` VARCHAR(150) NULL,
   PRIMARY KEY (`ID_Ruta`))
 ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Ampliar número de conexiones a la BD MySQL
+-- Esto es temporal, cuando se reinicie el servicio
+-- de MySQL deja el default.
+-- -----------------------------------------------------
+show variables like 'max_connections';
+SET GLOBAL max_connections = 1001;
