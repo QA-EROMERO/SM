@@ -40,3 +40,15 @@ CREATE TABLE IF NOT EXISTS `SM`.`SM_Material` (
   `ID_Idioma` INT NULL COMMENT 'Código del Idioma.',
   PRIMARY KEY (`ID_Material`))
 ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SM`.`SM_UsoYForma`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SM`.`SM_UsoYForma` (
+  `ID_UsoYForma` INT NULL AUTO_INCREMENT COMMENT 'Correlativo por cada registro.',
+  `Uso` VARCHAR(50) NULL COMMENT 'Tipos de Uso que se le daban a los Items.',
+  `Uso_Info` VARCHAR(2500) NULL COMMENT 'Información detallada de los Usos y Formas que corresponden a cada Item.',
+  `ID_Idioma` INT NULL COMMENT 'Código del Idioma.',
+  PRIMARY KEY (`ID_UsoYForma`))
+ENGINE = InnoDB;
