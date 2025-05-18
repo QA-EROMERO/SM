@@ -77,3 +77,15 @@ CREATE TABLE IF NOT EXISTS `SM`.`SM_Mapa` (
   `Mapa` VARCHAR(150) NULL COMMENT 'Ruta donde se encuentra el archivo .jpg del mapa.',
   PRIMARY KEY (`ID_Mapa`))
 ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SM`.`SM_ClasificacionUNESCO`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SM`.`SM_ClasificacionUNESCO` (
+  `ID_ClasificacionUNESCO` INT NULL AUTO_INCREMENT COMMENT 'Correlativo por cada registro.',
+  `Clasificacion` VARCHAR(50) NULL COMMENT 'Tipo de Clasificación que otorga la UNESCO a ciertos Items.',
+  `Clasificacion_Info` VARCHAR(2500) NULL COMMENT 'Información detallada de la clasificación de la UNESCO.',
+  `ID_Idioma` INT NULL COMMENT 'Código del Idioma.',
+  PRIMARY KEY (`ID_ClasificacionUNESCO`))
+ENGINE = InnoDB;
