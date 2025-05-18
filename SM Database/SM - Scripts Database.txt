@@ -99,3 +99,87 @@ CREATE TABLE IF NOT EXISTS `SM`.`SM_Idioma` (
   `Idioma` VARCHAR(50) NULL COMMENT 'Catálogo de Idiomas disponibles para traducir la App.',
   PRIMARY KEY (`ID_Idioma`))
 ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SM`.`SM_Item`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SM`.`SM_Item` (
+  `ID_Item` INT NOT NULL AUTO_INCREMENT COMMENT 'Código único de cada Item, este código será un secuencial conforme se vaya capturando los frames.',
+  `Codigo_SM` VARCHAR(45) NULL,
+  `Nombre` VARCHAR(100) NULL COMMENT 'Nombre del Item',
+  `Descripcion` VARCHAR(2500) NULL COMMENT 'Información detallada del uso y origen de la pieza. Esta información es proporcionada por cada Museo.',
+  `Ruta` VARCHAR(300) NULL COMMENT 'Ubicación física donde se encuentran los frames que componen el Item.',
+  `ID_PeriodoHistorico` INT NULL COMMENT 'Hace referencia al catálogo de Períodos que se encuentran en la tabla SM_PeriodoHistorico.',
+  `ID_Procedencia` INT NULL COMMENT 'Hace referencia al catálogo de Procedencia que se encuentran en la tabla SM_Procedencia.',
+  `ID_Material_1` INT NULL COMMENT 'Hace referencia al catálogo de Materiales que se encuentran en la tabla SM_Material.',
+  `ID_Material_2` INT NULL,
+  `ID_UsoYForma_1` INT NULL COMMENT 'Hace referencia al catálogo de Usos y Formas que se encuentran en la tabla SM_UsoYForma.',
+  `ID_UsoYForma_2` INT NULL,
+  `ID_Cedula` INT NULL COMMENT 'Hace referencia al la Cédula de cada Item que se encuentran en la tabla SM_Cedula.',
+  `ID_Mapa` INT NULL COMMENT 'Hace referencia al catálogo de Lugares de Descubrimiento que se encuentran en la tabla SM_LugarDeDescubrimiento.',
+  `ID_ClasificacionUNESCO` INT NULL COMMENT 'Hace referencia al catálogo de Clasificaciones creadas por la UNESCO que se encuentran en la tabla SM_ClasificacionUNESCO.',
+  `ID_Idioma` INT NULL COMMENT 'Hace referencia al catálogo de Idiomas que se encuentran en la tabla SM_LugarDeDescubrimiento.',
+  PRIMARY KEY (`ID_Item`),
+  UNIQUE INDEX `ID_UNIQUE` (`ID_Item` ASC),
+  INDEX `ID_PeriodoHistorico_idx` (`ID_PeriodoHistorico` ASC),
+  INDEX `ID_Procedencia_idx` (`ID_Procedencia` ASC),
+  INDEX `ID_Material_idx` (`ID_Material_1` ASC),
+  INDEX `ID_UsoYForma_idx` (`ID_UsoYForma_1` ASC),
+  INDEX `ID_Cedula_idx` (`ID_Cedula` ASC),
+  INDEX `ID_LugarDeDescubrimiento_idx` (`ID_Mapa` ASC),
+  INDEX `ID_ClasificacionUNESCO_idx` (`ID_ClasificacionUNESCO` ASC),
+  INDEX `ID_Idioma_idx` (`ID_Idioma` ASC),
+  INDEX `ID_Material_2_Item_idx` (`ID_Material_2` ASC),
+  INDEX `ID_UsoYForma_2_Item_idx` (`ID_UsoYForma_2` ASC),
+  CONSTRAINT `ID_PeriodoHistorico_Item`
+    FOREIGN KEY (`ID_PeriodoHistorico`)
+    REFERENCES `SM`.`SM_PeriodoHistorico` (`ID_PeriodoHistorico`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `ID_Procedencia_Item`
+    FOREIGN KEY (`ID_Procedencia`)
+    REFERENCES `SM`.`SM_Procedencia` (`ID_Procedencia`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `ID_Material_1_Item`
+    FOREIGN KEY (`ID_Material_1`)
+    REFERENCES `SM`.`SM_Material` (`ID_Material`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `ID_UsoYForma_1_Item`
+    FOREIGN KEY (`ID_UsoYForma_1`)
+    REFERENCES `SM`.`SM_UsoYForma` (`ID_UsoYForma`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `ID_Cedula_Item`
+    FOREIGN KEY (`ID_Cedula`)
+    REFERENCES `SM`.`SM_Cedula` (`ID_Cedula`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `ID_Mapa_Item`
+    FOREIGN KEY (`ID_Mapa`)
+    REFERENCES `SM`.`SM_Mapa` (`ID_Mapa`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `ID_ClasificacionUNESCO_Item`
+    FOREIGN KEY (`ID_ClasificacionUNESCO`)
+    REFERENCES `SM`.`SM_ClasificacionUNESCO` (`ID_ClasificacionUNESCO`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `ID_Idioma_Item`
+    FOREIGN KEY (`ID_Idioma`)
+    REFERENCES `SM`.`SM_Idioma` (`ID_Idioma`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `ID_Material_2_Item`
+    FOREIGN KEY (`ID_Material_2`)
+    REFERENCES `SM`.`SM_Material` (`ID_Material`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `ID_UsoYForma_2_Item`
+    FOREIGN KEY (`ID_UsoYForma_2`)
+    REFERENCES `SM`.`SM_UsoYForma` (`ID_UsoYForma`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
