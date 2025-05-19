@@ -1,0 +1,130 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	/*color: #A5A5A5;*/
+	/*color: #D7D7D7;*/
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /*padding-top: 100px;*/ /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+	/* La siguiente línea se la desactive para que
+	   no se active el scroll de toda la pantalla. "/*overflow: auto;".
+	*/
+    /*overflow: auto;*/ /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    /*position: relative;*/
+	position: absolute;
+    background-color: #333333;/*#282828;*//*#fefefe;*/
+	/*
+		"font-size:1vw;" 1vw se utiliza para indicarle que el tamaño de la fuente
+		tendra 1% del tamañao del "viewport".
+	*/
+	font-size:1.1vw;
+	/*color: #CCCCCC;*/
+	/* Esto lo comente */
+    /*margin: auto;*/
+	right: 0%;
+    padding: 0;
+    /*border: 1px solid #1C1C1C;*//*#888;*/
+    width: 25%;
+	/* La siguiente línea se la agregue:  "height: 50%;" */
+	height: 100%;
+	/*
+		"overflow: auto;" es necesario para que se active el scroll
+	*/
+	overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {right:-300px; opacity:0} 
+    to {right:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {right:-300px; opacity:0}
+    to {right:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: #F2650B;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #57585B;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #1C1C1C;/*#5cb85c;*/
+    color: #CCCCCC;
+	text-align: center;
+	/*
+		Agregué la propiedad "position: fixed;" para que no se moviera
+		juntamente con el scroll.
+	*/
+	/*position: fixed;*/
+}
+
+.modal-body {padding: 2px 16px;}
+
+#peridoEtiqueta, #procedenciaEtiqueta, 
+#materialEtiqueta, #usosEtiqueta,
+#bienesCulturalesEnPeligro {
+		font-weight: bold;
+}
+
+#peridoEtiqueta, #procedenciaEtiqueta, 
+#materialEtiqueta, #usosEtiqueta,
+#perido, #procedencia,
+#material, #usos,
+#cedulaNombre, #cedulaProcedencia,
+#cedulaPeriodo, #cedulaReferenciaMUNAE,
+#descripcion {
+		color: #CCCCCC;
+}
+
+#bienesCulturalesEnPeligro {
+		color: #F2650B;
+}
+
+.mapaItem{
+	position: relative;
+	top: 10px;
+	width: 70%;
+	height: auto;
+	/*
+		Las siguientes dos líneas de código se utilizan para centrar
+		la imagen.  Para que esto funcione, se necesita determinar un
+		ancho y alto.
+		display: flex;
+		margin: 0 auto;
+	*/
+	display: flex;
+    margin: 0 auto;
+}

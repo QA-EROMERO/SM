@@ -1,0 +1,181 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+	Desactivar todos los scrollbar
+*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+
+	margin: 0;
+	overflow: hidden;
+	font-size: 11.5px;
+	/*text-align: justify;*/
+}
+
+.sidebar {
+
+	position: absolute;
+	width: 250px;
+	height: 100%;
+	background: #000000; /* #66cccc - #333*/
+	color: #fff;      /* TITULO MENU - #fff - #F2650B*/
+	outline: 1px solid #57585B; /*#2a2a2a - #57585B*/
+	overflow: auto;
+}
+
+.sidebar h2{
+	text-align: center;
+	margin: 0;
+	padding: 10px;
+	background: #333333;/*#2a2a2a;*/
+}
+
+.sidebar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/*
+.sidebar li {
+	outline: 1px solid #fff; /*#2a2a2a - #fff
+	transition: all 0.3s;
+	transition-property: border;
+	transition-duration: 0.3s;
+}
+*/
+
+.sidebar li:hover {
+	background: #666666; /*#F2650B - #666666*/
+	/*border-left: 5px solid #F2650B;*/ /* BORDE IZQUIERDO DE LOS NOMBRES #eee - #8A3A06 #F2650B*/
+}
+
+
+.sidebar a {
+display: block;
+text-decoration:none;
+padding: 10px;	
+}
+
+
+.sidebar ul li span {
+	position: absolute;
+	right: 5px;
+}
+
+
+.sidebar .menu {
+	background: #333333;/*#00aab2;*/ /*CAMBIO DE COLOR DEL FONDO DE LOS MENUS*/
+}
+
+.sidebar .menu a {
+	color: #FFFFFF;/*#CCCCCC;*/ /*#ff7b25;*/ /*CAMBIO DE COLOR DE LA FUENTE DE LOS MENUS*/
+	font-weight: bold;
+}
+
+.sidebar .menu li {
+	background: #666666; /*#b24904;*/ /*#424242  MODIFICA COLOR DE FONDO DE LOS SUBTITULOS*/	
+}
+
+.sidebar .menu .submenu-lv2 a {
+	color:#FFFFFF;					/*MODIFICA EL COLOR DE LA FUENTE DE LOS SUBTITULOS*/
+}
+
+
+.sidebar .menu .submenu-lv2 .submenu-lv3 a {
+	background: #000000; /*#424242  MODIFICA COLOR DE FONDO DE LOS ITEMS*/
+	color:  #CCCCCC; /*#0cf4ff;*/
+	font-weight: 1;
+}
+
+
+
+.sidebar .menu.activado_1{
+	background: #F2650B;     /* Nos sirve para saber que Título fue activado*/
+	color: #2F2F2F; /*#fff;*/
+}
+
+.sidebar .submenu-lv2.activado_2{
+	background: #F2650B;     /* Nos sirve para saber que Subtitulo fue activado*/
+	color:#fff;
+}
+
+/*
+	Para cambiar de color a los items de segundo nivel
+*/
+.cambiarColor li a{
+	background: #000000; /*#424242  MODIFICA COLOR DE FONDO DE LOS ITEMS*/
+	color:  #CCCCCC; /*#0cf4ff;*/
+	font-weight: 1;
+}
+
+/*
+	Centrar el nombre de la Empresa
+*/
+.centrarNombreDeEmpresa {
+	text-align: center;
+}
+
+.contenido {
+
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #000000; /*#eee - */
+	padding: 5px;
+	transition-duration: 0.3s;
+	box-sizing: border-box;
+}
+
+.menu-bar {
+	position: absolute;
+	top: 0.5vw;
+	left: 0.5vw;
+	cursor: pointer;
+}
+
+.abrir {
+	transform: translateX(250px);
+}
+
+
+
+.menu ul li {
+	display: none;
+}
+
+/* 
+*Se agrega clase para desplegar sub-menu
+*/
+.menu-display ul li {
+	display: block;
+}
+
+.icono.derecha {
+	float: right;
+	margin-left: 10px;
+}
+
+.icono.izquierda {
+	/*float: left;
+	margin-right: 5px;*/
+	float: left;
+	left: 0;
+	height: auto;
+	/*height: 38px;*/
+	width: auto;
+}
+
+/*
+	Sirve para darle al título de la pieza
+	la misma altura que la imagen 38px.
+*/
+.alturaTituloItem  {
+	height: 38px;
+}

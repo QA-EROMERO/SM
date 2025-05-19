@@ -1,0 +1,104 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal-creditos {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /*overflow: auto;*/ /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content-creditos {
+    /*position: relative;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: auto;
+	background-color: #333333;
+	font-size:1.5vw;
+	color: #CCCCCC;
+    /*margin: auto;*/
+    padding: 0;
+    /*border: 1px solid #888;*/
+    width: 80%;
+	height: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+/*
+	Se comentan las siguientes líneas para quitar la animación cuando
+	aparece el modal de los créditos.
+*/
+/*
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+*/
+
+/* The Close Button */
+.close {
+    color: #F2650B;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header-creditos {
+    padding: 2px 16px;
+    background-color: #1C1C1C;
+    color: #CCCCCC;
+	text-align: center;
+}
+
+.logoAgradecimientos {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	height: 6vw;
+	width: auto;
+}
+
+.modal-body-creditos {padding: 2px 16px;}
+
+.divFundadores{
+	position: relative;
+	bottom: 1vw;
+	left: 20vw;
+	right: 20vw;
+	width: 50%;
+	/*
+		display:flex;
+		justify-content: space-between;
+		Estas dos líneas se agregaron para distribuir proporcinalmente el espacio horizontal
+		entre un div.
+	*/
+	display:flex;
+    justify-content: space-between;
+}

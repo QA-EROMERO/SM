@@ -1,0 +1,160 @@
+/*
+	Desactivar todos los scrollbar
+*/
+::-webkit-scrollbar {
+    display: none;
+}
+/*
+	Esto se utiliza para desactivar el scrollbar verticual y horizontal.
+	Estos se activaban en el showItem.html cuando se abría el menú y 
+	luego se hacía un swipe de derecha a izquierda con el menú activo.
+*/
+.contenido{
+	overflow: hidden;
+}
+/*
+	Sets the style of the image slider wrapper <div> to be centered horizontally and vertically.
+	It also sets its default dimensions and the overflowing hidden (to fix the IE image positioning bug).
+*/
+#threesixty {
+	position:absolute;
+	/* This one fixes the IE positioning bug */
+	overflow:hidden;
+	/*
+		Se agrego un margin-top para dejar espacio para el título de la pieza
+	*/
+	margin-top:2%;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	/*
+	width:960px;
+	height:540px;
+	margin-left:-480px;
+	margin-top:-270px;
+	*/
+	height:90%;
+	width: 70%;	
+}
+
+/*
+	Makes the image slider invisible by default
+*/
+#threesixty_images {
+	display: none;
+}
+/*
+	Sets every image in the slider to be absolute positioned and dynamically sized.
+*/
+#threesixty img {
+	position:absolute;
+	/* This one fixes the IE positioning bug */
+	/*top:0;*/
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width:auto;
+	height:100%;
+}
+/*
+	Sets the style of the visible current frame of the image slider animation
+*/
+.current-image {
+	visibility:visible;
+	width:100%;
+}
+/*
+	Sets the style of the visible "previous" frame of the image slider animation
+*/
+.previous-image {
+	visibility:hidden;
+	width:0;
+}
+/*
+	Sets the dimensions of the CanvasLoader placeholder <div>, it also centeres it horizontally and vertically inside the wrapper and makes it invisible by default
+*/
+#spinner {
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	width:90px;
+	height:90px;
+	/*
+	margin-left:-45px;
+	margin-top:-50px;
+	*/
+	display:none;
+}
+/*
+	Sets the style of the percentage <span> of the preloader by setting its dimensions and centering it horizontally and vertically 
+*/
+#spinner span {
+	position:absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width:100%;
+	color: #F2650B;
+	font:0.8em Arial, Verdana, sans;
+	text-align:center;
+	line-height:0.6em;
+	margin-top:-0.3em;
+	
+}
+
+/*
+Centrado de botones de navegacion
+*/
+.botonesDeNavegacion{
+	position: absolute;
+	bottom: 1vw;
+	left: 1vw;
+	width: 15%;
+	/*
+		display:flex;
+		justify-content: space-between;
+		Estas dos líneas se agregaron para distribuir proporcinalmente el espacio horizontal
+		entre un div.
+	*/
+	display:flex;
+    justify-content: space-between;
+	/*
+	right: 50%;
+	transform: translate(-50%, -50%);
+	*/
+}
+
+/*
+	Íconos de navegación
+*/
+.mostrarAnterior , .regresarALaPortada, .mostrarSiguiente, .informacionDeLaPieza {
+	width: 4vw;
+	height: 4vw;
+} 
+
+/*
+	ícono (i)
+*/
+.informacionDeLaPieza {
+	position: absolute;
+	top: 3vw;
+	right: 3vw;
+}
+
+/*
+	Título de la pieza en ShowItem.html
+*/
+#tituloPieza{
+	position: absolute;
+	top: 0;
+	/*
+		Para centrar el título se tuvo que agregar 2 líneas
+		width: 100%;
+		text-align: center;
+	*/
+	width: 100%;
+	text-align: center;
+	font-size: 2vw;
+	color: #CCCCCC;
+}
