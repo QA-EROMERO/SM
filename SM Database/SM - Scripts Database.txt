@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `SM`.`SM_Item` (
   `ID_Item` INT NOT NULL AUTO_INCREMENT COMMENT 'Código único de cada Item, este código será un secuencial conforme se vaya capturando los frames.',
   `Codigo_SM` VARCHAR(45) NULL,
   `Nombre` VARCHAR(100) NULL COMMENT 'Nombre del Item',
-  `Descripcion` VARCHAR(2500) NULL COMMENT 'Información detallada del uso y origen de la pieza. Esta información es proporcionada por cada Museo.',
+  `Descripcion` VARCHAR(5000) NULL COMMENT 'Información detallada del uso y origen de la pieza. Esta información es proporcionada por cada Museo.',
   `Ruta` VARCHAR(300) NULL COMMENT 'Ubicación física donde se encuentran los frames que componen el Item.',
   `ID_PeriodoHistorico` INT NULL COMMENT 'Hace referencia al catálogo de Períodos que se encuentran en la tabla SM_PeriodoHistorico.',
   `ID_Procedencia` INT NULL COMMENT 'Hace referencia al catálogo de Procedencia que se encuentran en la tabla SM_Procedencia.',
